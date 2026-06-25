@@ -83,23 +83,15 @@ body {
         box-shadow .3s ease;
 }
 
-.fotos:hover {
-    transform: translateY(-8px);
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
 /* =========================
    IMAGEM AMPLIADA
 ========================= */
 
 .aumenta {
-    transform: scale(1.5);
-
+    transform: scale(2);
     opacity: .9;
-
-    border: 2px solid #b9b0a8;
+    border: 1px solid #b9b0a8;
+    box-shadow: 0px 0px 4px #b9b0a8;
 }
 
 /* =========================
