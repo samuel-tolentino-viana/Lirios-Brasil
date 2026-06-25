@@ -24,7 +24,6 @@ header {
     background-position: center;
 }
 
-
 @media (max-width: 450px) {
     header {
         height: 238px;
@@ -77,8 +76,15 @@ header {
     object-fit: cover;
     border-radius: 32px;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .fotos:hover {
     transform: scale(1.03);
+}
+
+.aumenta {
+    transform: scale(1.5);
+    opacity: 0.5;
+    border: 5px solid red;
 }

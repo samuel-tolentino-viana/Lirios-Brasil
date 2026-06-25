@@ -1,10 +1,9 @@
-const fotos = window.document.querySelectorAll('.fotos');
+const fotos = document.querySelectorAll('.fotos');
 
-function crecer() {
-    alert('clicou!')
-};
+function crecer(evento) {
+    evento.target.classList.toggle('aumenta');
+}
 
-fotos[0].addEventListener('click', crecer);
-fotos[1].addEventListener('click', crecer);
-fotos[2].addEventListener('click', crecer);
-fotos[3].addEventListener('click', crecer);
+for (let n = 0; n < fotos.length; n++) {
+    fotos[n].addEventListener('click', crecer);
+}
