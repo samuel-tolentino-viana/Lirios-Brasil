@@ -1,25 +1,13 @@
-/* =========================
-   RESET
-========================= */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================
-   BODY
-========================= */
-
 body {
     background-color: #f8f1eb;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-/* =========================
-   BANNER
-========================= */
 
 .banner {
     width: 100%;
@@ -33,20 +21,11 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-
-/* =========================
-   CONTAINER
-========================= */
-
 .container {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
 }
-
-/* =========================
-   GALERIA
-========================= */
 
 .imagens {
     display: grid;
@@ -60,10 +39,6 @@ body {
 
     justify-items: center;
 }
-
-/* =========================
-   FOTOS
-========================= */
 
 .fotos {
     width: 100%;
@@ -83,20 +58,12 @@ body {
         box-shadow .3s ease;
 }
 
-/* =========================
-   IMAGEM AMPLIADA
-========================= */
-
 .aumenta {
     transform: scale(2);
     opacity: .9;
     border: 1px solid #b9b0a8;
     box-shadow: 0px 0px 4px #b9b0a8;
 }
-
-/* =========================
-   RESPONSIVIDADE
-========================= */
 
 @media (max-width: 450px) {
     .banner {
