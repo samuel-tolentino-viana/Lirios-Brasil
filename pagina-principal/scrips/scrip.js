@@ -1,14 +1,26 @@
 const fotos = document.querySelectorAll('.fotos');
 
-function crecer(evento) {
-    evento.target.classList.add('aumenta');
+function toggleZoom(event) {
+    const image = event.currentTarget;
+    const isZoomed = image.classList.contains('aumenta');
+
+    if (isZoomed) {
+        image.classList.remove('aumenta');
+        document.body.classList.remove('zoomed');
+    } else {
+        fotos.forEach(photo => photo.classList.remove('aumenta'));
+        image.classList.add('aumenta');
+        document.body.classList.add('zoomed');
+    }
 }
 
-function diminuir(evento) {
-    evento.target.classList.remove('aumenta');
-}
+fotos.forEach(photo => {
+    photo.addEventListener('click', toggleZoom);
+});
 
-for (let n = 0; n < fotos.length; n++) {
-    fotos[n].addEventListener('click', crecer);
-    fotos[n].addEventListener('mouseout', diminuir)
-}
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        fotos.forEach(photo => photo.classList.remove('aumenta'));
+        document.body.classList.remove('zoomed');
+    }
+});

@@ -13,9 +13,7 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-
     height: 340px;
-
     background-image: url('../imagens/lirios-brasil.jpg');
     background-size: cover;
     background-position: center;
@@ -29,41 +27,64 @@ body {
 
 .imagens {
     display: grid;
-
     grid-template-columns: repeat(
         auto-fit,
         minmax(150px, 1fr)
     );
-
     gap: 24px;
-
     justify-items: center;
 }
 
 .fotos {
     width: 100%;
     max-width: 180px;
-
     height: 280px;
-
     object-fit: cover;
-
     border-radius: 32px;
-
     cursor: pointer;
-
     transition:
         transform .3s ease,
         opacity .3s ease,
-        box-shadow .3s ease;
+        box-shadow .3s ease,
+        top .3s ease,
+        left .3s ease;
 }
 
-.aumenta {
-    transform: scale(2);
-    opacity: .9;
-    border: 1px solid #b9b0a8;
-    box-shadow: 0px 0px 4px #b9b0a8;
+body.zoomed::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(8px);
+    z-index: 998;
+    pointer-events: none;
 }
+
+body.zoomed .fotos:not(.aumenta) {
+    filter: blur(3px);
+    opacity: 0.35;
+}
+
+/*USADO NO JAVASCRIPT*/
+
+.aumenta {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+    width: auto;
+    height: auto;
+    max-width: 84vw;
+    max-height: 90vh;
+    opacity: 1;
+    border: 1px solid #b9b0a8;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.35);
+    z-index: 999;
+    cursor: zoom-out;
+    border-radius: 24px;
+}
+
+/*RESPONSIVO*/
 
 @media (max-width: 450px) {
     .banner {
