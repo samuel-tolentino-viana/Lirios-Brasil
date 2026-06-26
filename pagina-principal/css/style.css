@@ -75,7 +75,7 @@ body.zoomed .fotos:not(.aumenta) {
     width: auto;
     height: auto;
     max-width: 84vw;
-    max-height: 90vh;
+    max-height: 85vh;
     opacity: 1;
     border: 1px solid #b9b0a8;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.35);
