@@ -10,15 +10,14 @@ body {
 }
 
 header {
-    height: 86px;
+    height: 90px;
     width: 100%;
     background-color: #fff;
     display: flex;
-    max-width:;
     margin: auto;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0px 14px;
 }
 
 header h1 {
