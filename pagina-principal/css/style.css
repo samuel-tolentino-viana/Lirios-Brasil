@@ -9,9 +9,62 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+header {
+    height: 86px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    max-width:;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+header h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #4A3B31;
+}
+
+header p {
+    font-size: 0.8rem;
+    color: #8A7A6A;
+}
+
+header nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+nav a {
+    color: #4A3B31;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #B89063;
+    text-decoration: underline;
+}
+
+header .botao {
+    background-color: #B89063;
+    color: #fff;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+header .botao:hover {
+    background-color: #a27949;
+}
+
 .banner {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: auto;
     height: 340px;
     background-image: url('../imagens/lirios-brasil.jpg');
