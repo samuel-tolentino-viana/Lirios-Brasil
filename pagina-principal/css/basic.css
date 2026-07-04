@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo: #f8f1eb;
+    --branco: #ffffff;
+    --texto-principal: #4a3b31;
+    --texto-secundario: #8a7a6a;
+    --botao: #b89063;
+    --hover-claro: #9e7552;
+    --hover-escuro: #a27949;
+    --font-txtgrnade: 'Playfair Display', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --font-txtpequeno: 'Poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--fundo);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 90px;
+    width: 100%;
+    background-color: var(--branco);
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 14px;
+}
+
+header h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    font-family: var(--font-txtgrnade);
+    color: var(--texto-principal);
+}
+
+header p {
+    font-size: 0.8rem;
+    color: var(--texto-secundario);
+}
+
+header nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+nav a {
+    color: var(--botao);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--hover-claro);
+    text-decoration: underline;
+}
+
+header .botao {
+    background-color: var(--botao);
+    color: var(--branco);
+    padding: 12px 28px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+header .botao:hover {
+    background-color: var(--hover-escuro);
+}
+
+header p, a {
+    font-family: var(--font-txtpequeno);
+}
