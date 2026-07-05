@@ -16,7 +16,7 @@
     --hover-claro: #9e7552;
     --hover-escuro: #a27949;
     --font-txtgrnade: 'Playfair Display', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    --font-txtpequeno: 'Poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --font-txtpequeno: 'Poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
 }
 
 body {
