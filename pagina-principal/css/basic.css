@@ -1,82 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sriracha&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-:root {
-    --fundo: #f8f1eb;
-    --branco: #ffffff;
-    --texto-principal: #4a3b31;
-    --texto-secundario: #8a7a6a;
-    --botao: #b89063;
-    --hover-claro: #9e7552;
-    --hover-escuro: #a27949;
-    --font-txtgrnade: 'Playfair Display', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    --font-txtpequeno: 'Poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+:root{
+    --fundo:#f8f1eb;
+    --branco:#fff;
+    --texto-principal:#4a3b31;
+    --texto-secundario:#8a7a6a;
+    --botao:#b89063;
+    --hover-claro:#9e7552;
+    --hover-escuro:#a27949;
+    --font-titulo:'Playfair Display', serif;
+    --font-texto:'Poppins', sans-serif;
 }
 
-body {
-    background-color: var(--fundo);
-    font-family: Arial, Helvetica, sans-serif;
+body{
+    background:var(--fundo);
+    font-family:var(--font-texto);
 }
 
-header {
-    height: 90px;
-    width: 100%;
-    background-color: var(--branco);
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 14px;
+/* HEADER */
+
+header{
+    width:100%;
+    height:90px;
+    background:var(--branco);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 18px;
+    position:relative;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
 }
 
-header h1 {
-    font-size: 2.3rem;
-    font-weight: 700;
-    font-family: var(--font-txtgrnade);
-    color: var(--texto-principal);
+.logo h1{
+    font-family:var(--font-titulo);
+    font-size:clamp(1.3rem,8vw,2.2rem);
+    color:var(--texto-principal);
 }
 
-header p {
-    font-size: 0.8rem;
-    color: var(--texto-secundario);
+.logo p{
+    font-size:clamp(.58rem,2.6vw,1rem);
+    color:var(--texto-secundario);
 }
 
-header nav {
-    display: flex;
-    gap: 24px;
-    align-items: center;
+/* MENU DESKTOP */
+
+.navegacao{
+    display:flex;
+    gap:24px;
+    align-items:center;
 }
 
-nav a {
-    color: var(--botao);
-    text-decoration: none;
-    transition: 0.3s;
+.navegacao a{
+    text-decoration:none;
+    color:var(--botao);
+    transition:.3s;
 }
 
-nav a:hover {
-    color: var(--hover-claro);
-    text-decoration: underline;
+.navegacao a:hover{
+    color:var(--hover-claro);
 }
 
-header .botao {
-    background-color: var(--botao);
-    color: var(--branco);
-    padding: 12px 28px;
-    font-weight: 600;
-    border-radius: 10px;
-    transition: 0.4s;
+/* BOTÃO */
+
+.botao{
+    text-decoration:none;
+    background:var(--botao);
+    color:white;
+    padding:12px 24px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
 }
 
-header .botao:hover {
-    background-color: var(--hover-escuro);
+.botao:hover{
+    background:var(--hover-escuro);
 }
 
-header p, a {
-    font-family: var(--font-txtpequeno);
+/* BOTÃO MENU */
+
+#barra-lateral{
+    display:none;
+    width:48px;
+    height:48px;
+    border:none;
+    background:var(--botao);
+    color:white;
+    font-size:1.8rem;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#barra-lateral:hover{
+    background:var(--hover-escuro);
+}
+
+/* RESPONSIVO */
+
+@media (max-width:1240px){
+    .botao{
+        display:none;
+    }
+
+    #barra-lateral{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    #ativo{
+        display:none;
+        position:absolute;
+        top:100px;
+        right:18px;
+        z-index:100;
+    }
+
+    #ativo.ativo{
+        display:block;
+    }
+
+    .navegacao{
+        flex-direction:column;
+        gap:18px;
+        width:160px;
+        background:white;
+        padding:20px;
+        border-radius:12px;
+        box-shadow:0 5px 20px rgba(0,0,0,.15);
+    }
 }
