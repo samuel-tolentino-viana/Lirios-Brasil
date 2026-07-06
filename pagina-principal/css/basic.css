@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
 
+/* GLOBAIS */
+
 *{
     margin:0;
     padding:0;
@@ -8,6 +10,7 @@
 
 :root{
     --fundo:#f8f1eb;
+    --fundo-desktop: #f7eee8;
     --branco:#fff;
     --texto-principal:#4a3b31;
     --texto-secundario:#8a7a6a;
@@ -19,7 +22,7 @@
 }
 
 body{
-    background:var(--fundo);
+    background:var(--fundo-desktop);
     font-family:var(--font-texto);
 }
 
@@ -52,7 +55,7 @@ header{
 
 .navegacao{
     display:flex;
-    gap:24px;
+    gap:32px;
     align-items:center;
 }
 

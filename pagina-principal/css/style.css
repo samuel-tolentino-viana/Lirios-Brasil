@@ -1,13 +1,12 @@
-.banner {
-    width: 100%;
-    max-width: 1300px;
-    margin: auto;
-    height: 340px;
-    background-image: url('../imagens/lirios-brasil.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* GLOBAIS */
+
+:root {
+    --titulos: #3F322C;
+    --subtitulo: #8B6F5A;
+    --textos: #5E5A57;
 }
+
+/* MAIN */
 
 .container {
     max-width: 1200px;
@@ -15,13 +14,52 @@
     padding: 20px;
 }
 
-.imagens {
+.controle-tamanho {
+    max-width: 750px;
+    margin: auto;
+}
+
+.apresentacao {
+    width: 100%;
+    margin: 90px 0px;
+}
+
+.apresentacao h2 {
+    color: var(--titulos);
+    font-size: 2.6rem;
+    margin-bottom: 8px;
+}
+
+.apresentacao .slogan {
+    font-size: 1.2rem;
+    margin-bottom: 26px;
+    color: var(--subtitulo);
+}
+
+.apresentacao p {
+    color: var(--textos);
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.banner {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    height: 340px;
+    background-image: url('../imagens/fundo/lirios-brasil.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.colecao {
     display: grid;
     grid-template-columns: repeat(
         auto-fit,
         minmax(150px, 1fr)
     );
-    gap: 20px;
+    gap: 24px;
     justify-items: center;
 }
 
@@ -103,15 +141,10 @@ body.zoomed .fotos:not(.aumenta) {
 }
 
 @media (min-width: 52em) {
-    body {
-        background-color: #f6eee7;
-    }
-
     .banner {
         height: 260px;
-
         background-image:
-            url('../imagens/lirios-brasil-desktop.png');
+            url('../imagens/fundo/lirios-brasil-desktop.png');
     }
 }
 
@@ -120,6 +153,6 @@ body.zoomed .fotos:not(.aumenta) {
         height: 350px;
 
         background-image:
-            url('../imagens/lirios-brasil-desktop.png');
+            url('../imagens/fundo/lirios-brasil-desktop.png');
     }
 }
