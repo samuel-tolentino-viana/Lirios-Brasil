@@ -46,11 +46,6 @@ header{
     color:var(--texto-principal);
 }
 
-.logo p{
-    font-size:clamp(.58rem,2.6vw,1rem);
-    color:var(--texto-secundario);
-}
-
 /* MENU DESKTOP */
 
 .navegacao{
