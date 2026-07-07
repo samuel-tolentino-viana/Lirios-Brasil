@@ -57,6 +57,7 @@
 .colecao {
     max-width: 1200px;
     margin: auto;
+    margin-top: 120px;
 }
 
 .roupa {
@@ -65,12 +66,12 @@
         auto-fit,
         minmax(260px, 1fr)
     );
-    gap: 20px;
     justify-items: center;
+    gap: 30px;
 }
 
 button {
-    width: 128%;
+    width: 200px;
     padding: 12px;
     border-radius: 12px;
     border: none;
@@ -84,8 +85,8 @@ button:hover {
 
 .modelo {
     background-color: var(--modelos);
-    padding: 40px;
-    max-width: 275px;
+    padding: 20px;
+    width: 245px;
     border-radius: 16px;
     padding-bottom: 20px;
     display: flex;
@@ -93,10 +94,45 @@ button:hover {
     align-items: center;
 }
 
-@media (min-width: 140px) {
+@media (max-width: 391px) {
+    .roupa {
+        grid-template-columns: repeat(
+        auto-fit,
+        minmax(140px, 1fr));
+        gap: 50px;
+    }
     .modelo {
-        width: 200px;
-        height: 250px;
+        width: 170px;
+    }
+
+    button {
+        width: 110px;
+        
+    }
+}
+
+@media (max-width: 389px) {
+
+    .modelo {
+        max-width: 350px;
+        min-width: 300px;
+        display: flex;
+        padding: 12px 0px;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    button {
+        width: 100px;
     }
 }
 
