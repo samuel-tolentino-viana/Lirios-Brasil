@@ -45,6 +45,12 @@ header{
     color:var(--texto-principal);
 }
 
+.logo p {
+    color: var(--texto-secundario);
+    font-family: var(--font-texto);
+    font-size: clamp(0.9rem, 2vw, 2rem);
+}
+
 /* MENU DESKTOP */
 
 .navegacao{
