@@ -16,6 +16,9 @@
     --botao:#b89063;
     --hover-claro:#9e7552;
     --hover-escuro:#a27949;
+    --footer-fundo: #3F322C; 
+    --footer-titulos: #F7F2EC;
+    --footer-textos: #D9CFC7;
     --font-titulo:'Playfair Display', serif;
     --font-texto:'Poppins', sans-serif;
 }
@@ -104,7 +107,67 @@ header{
     background:var(--hover-escuro);
 }
 
+    /* FOOTER */
+
+footer {
+    margin: auto;
+    padding: 60px 20px 30px;
+    background-color: var(--footer-fundo);
+}
+
+.footer-conteudo {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-conteudo h2, .footer-conteudo h3 {
+    color: var(--footer-titulos);
+    margin-bottom: 16px;
+}
+
+.footer-conteudo p {
+    color: var(--footer-textos);
+    line-height: 1.6;
+}
+
+.footer-conteudo nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-conteudo a {
+    text-decoration: none;
+    transition: 0.3s;
+    color:var(--footer-textos);
+}
+
+.footer-conteudo a:hover {
+    color: var(--branco);
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.289);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.copyright p {
+    color: var(--footer-textos);
+    font-size: 0.9rem;
+}
+
 /* RESPONSIVO */
+
+@media (max-width: 1000px) {
+    .footer-conteudo {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
 
 @media (max-width:1240px){
     .botao{
