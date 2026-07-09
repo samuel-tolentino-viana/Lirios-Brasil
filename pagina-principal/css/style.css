@@ -79,13 +79,6 @@
     gap: 20px;
 }
 
-.compra:hover {
-    background: #5B463D;
-    box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.201);
-    transform: translateY(-1px);
-}
-
-
 .modelo {
     background-color: var(--modelos);
     border: 1px solid #D7C8BA;
@@ -131,11 +124,10 @@
 }
 
 
-.compra {
+section .compra {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border-radius: 12px;
-    border: none;
     transition: 
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -145,6 +137,20 @@
      background: #3F322C;
     color: white;
     transition: .3s;
+    text-decoration: none;
+    text-align: center;
+}
+
+section .compra:hover {
+    background: #5B463D;
+    box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.201);
+    transform: translateY(-1px);
+}
+
+.item-flex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
     /* JAVASCRIPT */
