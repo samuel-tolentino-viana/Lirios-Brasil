@@ -11,8 +11,8 @@
 :root{
     --fundo-desktop: #f7eee8;
     --branco:#fff;
-    --texto-principal:#4a3b31;
-    --texto-secundario:#8a7a6a;
+    --texto-grande:#4a3b31;
+    --texto-pequeno:#8a7a6a;
     --botao:#b89063;
     --hover-claro:#9e7552;
     --hover-escuro:#a27949;
@@ -45,11 +45,11 @@ header{
 .logo h1{
     font-family:var(--font-titulo);
     font-size:clamp(1.3rem,8vw,2.2rem);
-    color:var(--texto-principal);
+    color:var(--texto-grande);
 }
 
 .logo p {
-    color: var(--texto-secundario);
+    color: var(--texto-pequeno);
     font-family: var(--font-texto);
     font-size: clamp(0.9rem, 2vw, 1rem);
 }
