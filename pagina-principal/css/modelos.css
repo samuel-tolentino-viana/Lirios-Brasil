@@ -3,6 +3,7 @@
 :root{
     --branco:#FFF;
     --texto-grande:#4A3B31;
+    --texto-medio:#5f4a3c;
     --texto-pequeno:#8A7A6A;
     --fonte-principal: Arial, Helvetica, sans-serif;
     --line-height: 1.6rem;
@@ -19,9 +20,11 @@ main {
 .coluna2 h2 {
     color: var(--texto-grande);
     font: var(--titulo-principal);
+    margin-bottom: 32px;
 }
 .coluna2 h3 {
     font: var(--subtitulo);
+    color: var(--texto-medio);
 }
 
 /* COLUNAS */
@@ -38,6 +41,7 @@ main {
 
 .modelo-imagem {
     max-width: 530px;
+    margin: auto;
 }
 
 .modelo-imagem img {
@@ -64,9 +68,8 @@ main {
 
 /* RESPONSIVIDADE */
 
-@media (max-width: 830px) {
+@media (max-width: 680px) {
     .controle-display {
         flex-direction: column;
-        align-items: center;
     }
 }
