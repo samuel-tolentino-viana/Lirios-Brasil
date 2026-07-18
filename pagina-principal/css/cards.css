@@ -1,0 +1,111 @@
+/* COLEÇÃO DOS CARDS */
+
+.colecao {
+    max-width: 1200px;
+    margin: 120px auto 0;
+}
+
+
+.titulo-colecao h2 {
+    color: var(--titulos);
+    text-align: center;
+    margin-bottom: 64px;
+    font-size: 1.6em;
+}
+
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 20px;
+    margin: 16px;
+}
+
+.modelo {
+    background-color: var(--modelos);
+    border: 1px solid #D7C8BA;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    padding: 20px;
+    max-width: 230px;
+    width: 100%;
+    border-radius: 16px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    transition:
+    transform 0.3s ease,
+    box-shadow 0.4s ease;
+}
+
+.modelo h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--titulos);
+    letter-spacing: 0.7px;
+    margin: 20px 0 14px;
+    text-align: center;
+}
+
+
+.fotos {
+    width: 100%;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.045);;
+    align-self: center;
+    max-width: 180px;
+    height: 288px;
+    object-fit: cover;
+    border-radius: 32px;
+    cursor: pointer;
+    transition:
+        transform .3s ease,
+        opacity .3s ease,
+        box-shadow .3s ease,
+        top .3s ease,
+        left .3s ease;
+}
+
+
+section .compra {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+     background: #3F322C;
+    color: white;
+    transition: .3s;
+    text-decoration: none;
+    text-align: center;
+}
+
+section .compra:hover {
+    background: #5B463D;
+    box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.201);
+    transform: translateY(-1px);
+}
+
+.item-flex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* GRID > GALERIA */
+
+    @media (min-width: 760px) {
+        .galeria {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (min-width: 1100px) {
+        .galeria {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
