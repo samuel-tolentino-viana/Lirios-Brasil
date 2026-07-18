@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
 /* GLOBAIS */
 
 :root{
@@ -5,26 +7,17 @@
     --texto-grande:#4A3B31;
     --texto-medio:#5f4a3c;
     --texto-pequeno:#8A7A6A;
-    --fonte-principal: Arial, Helvetica, sans-serif;
     --line-height: 1.6rem;
-    --texto-corpo: 400 1rem var(--fonte-principal);
-    --titulo-principal: 700 2.5rem var(--fonte-principal);
-    --subtitulo: 600 1.5rem var(--fonte-principal);
+    --font-titulo:'Playfair Display', serif;
+    --font-texto:'Poppins', sans-serif;
+    --texto-corpo: 400 1rem var();
+    --titulo-principal: 700 2.5rem var(--font-titulo);
+    --subtitulo: 600 1.5rem var(--font-texto);
 }
 
 main {
     max-width: 1200px;
     margin: auto;
-}
-
-.coluna2 h2 {
-    color: var(--texto-grande);
-    font: var(--titulo-principal);
-    margin-bottom: 32px;
-}
-.coluna2 h3 {
-    font: var(--subtitulo);
-    color: var(--texto-medio);
 }
 
 /* COLUNAS */
@@ -35,13 +28,13 @@ main {
 }
 
 .coluna1 {
-    padding: 32px;
+    padding: 16px;
     flex-grow: 3;
+    
 }
 
 .modelo-imagem {
-    max-width: 530px;
-    margin: auto;
+    max-width: 530px; /* TAMANHO ADEQUADO  */
 }
 
 .modelo-imagem img {
@@ -49,17 +42,30 @@ main {
     border-radius: 12px;
 }
 
+.coluna1, .informacao {
+    margin-bottom: 32px;
+}
+
 .coluna2 {
     padding: 32px;
     flex-grow: 2;
 }
 
-.coluna1, .informacao {
-    margin-bottom: 24px;
-}
+
 
 .informacao p {
     font: var(--texto-corpo);
+}
+
+.coluna2 h2 {
+    color: var(--texto-grande);
+    font: var(--titulo-principal);
+    margin-bottom: 32px;
+}
+.coluna2 h3 {
+    font: var(--subtitulo);
+    color: var(--texto-medio);
+    margin-bottom: 10px;
 }
 
 .sobre {
@@ -68,7 +74,7 @@ main {
 
 /* RESPONSIVIDADE */
 
-@media (max-width: 680px) {
+@media (max-width: 580px) {
     .controle-display {
         flex-direction: column;
     }
