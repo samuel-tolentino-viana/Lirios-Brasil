@@ -3,16 +3,15 @@
 /* GLOBAIS */
 
 :root{
-    --branco:#FFF;
-    --texto-grande:#4A3B31;
-    --texto-medio:#5f4a3c;
-    --texto-pequeno:#8A7A6A;
+    --texto-grande:#4A3B31; /* TÍTULOS */
+    --texto-medio:#5f4a3c; /* SUBTÍTULOS */
+    --texto-corpo: #6E5C50; /* TEXTOS PARA LER */
     --line-height: 1.6rem;
-    --font-titulo:'Playfair Display', serif;
-    --font-texto:'Poppins', sans-serif;
-    --texto-corpo: 400 1rem var();
-    --titulo-principal: 700 2.5rem var(--font-titulo);
-    --subtitulo: 600 1.5rem var(--font-texto);
+    --titulo:'Playfair Display', serif;
+    --texto:'Poppins', sans-serif;
+    --font-texto-corpo: 400 1rem var(--texto);
+    --font-titulo-principal: 700 2.5rem var(--titulo);
+    --font-subtitulo: 600 1.5rem var(--texto);
 }
 
 main {
@@ -39,7 +38,7 @@ main {
 
 .modelo-imagem img {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 16px;
 }
 
 .coluna1, .informacao {
@@ -59,17 +58,29 @@ main {
 
 .coluna2 h2 {
     color: var(--texto-grande);
-    font: var(--titulo-principal);
+    font: var(--font-titulo-principal);
     margin-bottom: 32px;
 }
 .coluna2 h3 {
-    font: var(--subtitulo);
+    font: var(--font-subtitulo);
     color: var(--texto-medio);
     margin-bottom: 10px;
 }
 
 .sobre {
+    padding: 8px;
+}
+
+.sobre h2 {
+    color: var(--texto-medio);
+    font: var(--font-subtitulo);
+    margin-bottom: 12px;
+}
+
+.sobre p {
+    font: var(--font-texto-corpo);
     line-height: var(--line-height);
+    color: var(--texto-corpo);
 }
 
 /* RESPONSIVIDADE */
@@ -78,4 +89,4 @@ main {
     .controle-display {
         flex-direction: column;
     }
-}
+} /* APENAS PARA CELULARES */
