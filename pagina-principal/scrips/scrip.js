@@ -30,3 +30,13 @@ document.addEventListener('keydown', (event) => {
 botao.addEventListener("click", () => {
     menu.classList.toggle("ativo");
 });
+
+// PARTES DO SITE NÃO CRIADAS
+
+const emDesenvolvimento = document.querySelectorAll('.desenvolvimento');
+
+for(let percorre of emDesenvolvimento) { // PERCORRE TODOS OS ITENS DO ARRAY (EMDESENVOLVIMENTO)
+    percorre.addEventListener('click', () => { //ADICIONA O EVENTO ENQUANTO PERCORRE
+        alert('Ainda em desenvolvimento! Volte depois.'); //VOLTA O ALERT
+    })
+}
