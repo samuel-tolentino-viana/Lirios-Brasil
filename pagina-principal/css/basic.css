@@ -9,16 +9,30 @@
 }
 
 :root{
+    /* CORES FUNDO */
     --fundo-desktop: #f7eee8;
     --branco:#fff;
-    --texto-grande:#4a3b31;
-    --texto-pequeno:#8a7a6a;
+
+    /* CORES DE TEXTOS E BOTÃO */
+
+    --texto-titulo:#4a3b31;
+    --texto-corpo: #6E5C50;
+    --texto-secundario:#8a7a6a;
     --botao:#b89063;
+
+    /* HOVER'S */
+
     --hover-claro:#9e7552;
     --hover-escuro:#a27949;
+
+    /* FOOTER */
+
     --footer-fundo: #3F322C; 
     --footer-titulos: #F7F2EC;
     --footer-textos: #D9CFC7;
+
+    /* FONTS */
+
     --font-titulo:'Playfair Display', serif;
     --font-texto:'Poppins', sans-serif;
 }
@@ -45,11 +59,11 @@ header{
 .logo h1{
     font-family:var(--font-titulo);
     font-size:clamp(1.3rem,8vw,2.2rem);
-    color:var(--texto-grande);
+    color:var(--texto-titulo);
 }
 
 .logo p {
-    color: var(--texto-pequeno);
+    color: var(--texto-secundario);
     font-family: var(--font-texto);
     font-size: clamp(0.9rem, 2vw, 1rem);
 }

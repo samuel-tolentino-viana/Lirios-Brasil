@@ -3,9 +3,9 @@
 /* GLOBAIS */
 
 :root{
-    --texto-grande:#4A3B31; /* TÍTULOS */
+    --texto-titulo:#4A3B31; /* TÍTULOS */
     --texto-medio:#5f4a3c; /* SUBTÍTULOS */
-    --texto-corpo: #6E5C50; /* TEXTOS PARA LER */
+    --sobre-peça: #6E5C50; /* TEXTOS PARA LER */
     --line-height: 1.6rem;
     --titulo:'Playfair Display', serif;
     --texto:'Poppins', sans-serif;
@@ -17,6 +17,7 @@
 main {
     max-width: 1200px;
     margin: auto;
+    margin-bottom: 50px;
 }
 
 /* COLUNAS */
@@ -50,14 +51,12 @@ main {
     flex-grow: 2;
 }
 
-
-
 .informacao p {
-    font: var(--texto-corpo);
+    font: var(--sobre-peça);
 }
 
 .coluna2 h2 {
-    color: var(--texto-grande);
+    color: var(--texto-titulo);
     font: var(--font-titulo-principal);
     margin-bottom: 32px;
 }
@@ -80,7 +79,7 @@ main {
 .sobre p {
     font: var(--font-texto-corpo);
     line-height: var(--line-height);
-    color: var(--texto-corpo);
+    color: var(--sobre-peça);
 }
 
 /* RESPONSIVIDADE */

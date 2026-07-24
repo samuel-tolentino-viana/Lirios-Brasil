@@ -1,6 +1,6 @@
 const fotos = document.querySelectorAll('.fotos');
 const botao = document.getElementById('barra-lateral');
-const menu = document.getElementById("ativo");
+const menu = document.getElementById('ativo');
 
 function toggleZoom(event) {
     const image = event.currentTarget;
@@ -27,8 +27,12 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-botao.addEventListener("click", () => {
-    menu.classList.toggle("ativo");
+botao.addEventListener('click', (e) => {
+    menu.classList.toggle('ativo');
+    e.stopImmediatePropagation();
+});
+document.addEventListener('click', () => {
+    menu.classList.remove('ativo');
 });
 
 // PARTES DO SITE NÃO CRIADAS
